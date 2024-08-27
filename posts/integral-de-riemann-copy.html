@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script defer type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body style="background-color:#fffee5; padding-inline: 100px; font-size: 100%; font-family: Comic Sans MS;">
+
+  <nav style="display: flex; justify-content: center;">
+    <a href="../index.html" style="display: inline-block; padding: 5px 20px; text-decoration: none;">Home</a>
+    <a href="../about.html" style="display: inline-block; padding: 5px 20px; text-decoration: none;">About</a>
+  </nav>
+
+  <h1>Integral definida</h1>
+
+  <p>Actualmente </p>
+
+  <h2>Definition (Darboux sums)</h2>
+  <p> Let $f: [a, b] \to \mathbb{R}$ be a bounded function. Let $P$ be a partition of $[a, b]$, $I_n = [x_{i-1},
+    x_{i}]$,
+    $\Delta x_i = x_{i} - x_{i-1}$, then
+  <ul>
+    <li>Upper Darboux sum: $\displaystyle U(f,P) = \sum_{i=1}^{n} \left(\sup_{x \in I_i} \{f(x)\} \cdot \Delta x_i
+      \right)$</li>
+    <br>
+    <li>Lower Darboux sum: $\displaystyle L(f,P) = \sum_{i=1}^{n} \left(\inf_{x \in I_i} \{f(x)\} \cdot \Delta x_i
+      \right)$</li>
+  </ul>
+  </p>
+
+  <h2>Definition (Darboux integrals)</h2>
+  <p> Let $f: [a, b] \to \mathbb{R}$ be a bounded function. Let
+
+  <ul>
+    <li>Upper Darboux integral: $U(f) = \inf \{U(f,P) : \text{ for all partition } P \}$</li>
+    <br>
+    <li>Lower Darboux integral: $L(f) = \sup \{L(f,P) : \text{ for all partition } P \}$</li>
+  </ul>
+
+  The function $f$ is Darboux integrable on $[a, b]$ if an only if $U(f) = L(f)$. Then $I = U(f) = L(f)$.
+  </p>
+
+  <h2>Definition (Riemann sum)</h2>
+  <p>Let $f: [a, b] \to \mathbb{R}$ be a bounded function. Let $P$ be a partition of $[a, b]$ and $X$ a selection of
+    points in each subinterval $c_i \in [x_{i-1}, x_{i}]$. Let $\Delta x_i = x_{i} - x_{i-1}$. The associated Riemann
+    sum is
+
+    $$S(f, P, X) = \sum_{i = 1}^{n} f(c_i) \Delta x_i$$
+  </p>
+
+  <h2>Definition (Riemann integral)</h2>
+
+  <p>
+    Let $f: [a, b] \to \mathbb{R}$ be a bounded function. The function $f$ is Riemann integrable on $[a, b]$ if and
+    only
+    if
+
+    $$(\forall \varepsilon > 0)(\exists \delta > 0)(\forall P)(\forall X): \|P\|\ \leq \delta \implies | I - S(f, P, X)
+    | \leq \varepsilon$$
+  </p>
+
+
+  <h2>Theorem (Riemann's criterion)</h2>
+
+  <p> Let $f: [a, b] \to \mathbb{R}$ be a bounded function. The function $f$ is Riemann integrable on $[a, b]$ if and
+    only
+    if
+
+    $$(\forall \varepsilon > 0)(\exists P): U(f, P) - L(f, P) \leq \varepsilon$$
+  </p>
+
+  <h2>Theorem (Darboux's criterion)</h2>
+
+  <p>
+    Let $f: [a, b] \to \mathbb{R}$ be a bounded function. The function $f$ is Riemann integrable on $[a, b]$ if and only
+    if
+
+    $$(\forall \varepsilon > 0)(\exists \delta > 0)(\forall P): \|P\|\ \leq \delta \implies U(f, P) - L(f, P) \leq
+    \varepsilon$$
+  </p>
+
+  <!-- <h2>Theorem (Cauchy's criterion)</h2> -->
+
+  <h2>Theorem</h2>
+
+  <p> Let $f: [a, b] \to \mathbb{R}$ be a bounded function, $P_1, P_2$ be partitions of $[a, b]$, then
+
+    $$L(f, P_1) \leq U(f, P_2)$$
+  </p>
+
+  <h2>Theorem</h2>
+
+  <p>Let $f: [a, b] \to \mathbb{R}$ be a bounded function, $P_1, P_2$ be partitions of $[a, b]$ where $P_2$ is a
+    refinement of $P_1$, then
+
+    $$L(f, P_1) \leq L(f, P_2) \leq U(f, P_2) \leq U(f, P_1)$$
+  </p>
+
+  <h2>Theorem</h2>
+
+  <p> Let $f: [a, b] \to \mathbb{R}$ be a bounded function, then $L(f) \leq U(f).$
+  </p>
+
+
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+
+
+
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+  </script>
+  <style>
+    a:hover {
+      color: #FF407D;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      /* pointer-events: none; */
+    }
+
+    html {
+      overflow-y: scroll;
+    }
+  </style>
+
+</body>
+
+</html>
